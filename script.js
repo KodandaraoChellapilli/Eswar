@@ -45,11 +45,10 @@
 
 //Booleans and truthy and falsy values
 
-// "hello" 
+// "hello"
 //42
 // [], {}(empty array/object)
 //true
-
 
 // Falsy values
 // "", 0, null, undefined, NaN, false
@@ -82,7 +81,6 @@
 // Regular expressions: /regex/
 // Errors: new Error("Something went wrong")
 
-
 // Common Array methods:
 // Push() Add to the end
 // let fruits = ["apple", "banana", "orange"];
@@ -112,7 +110,6 @@
 // console.log(fruits.includes("banana"));
 // console.log(fruits.includes("kiwi"));
 
-
 //.join() - Turn into string
 // console.log(fruits.join(", "));
 
@@ -134,12 +131,10 @@
 // fruits.splice(1, 3);
 // console.log(fruits);
 
-
 // let owerName = "Eswar";
 // let maxPrice = 10000;
 // let category = "Bathroom";
 // let newShower = true;
-
 
 // What is an Object?
 
@@ -156,7 +151,6 @@
 // console.log(renovationJob.maxPrice);
 // console.log(renovationJob.category);
 // console.log(renovationJob.newShower);
-
 
 // const renovationJob = {
 //   owner: {
@@ -243,10 +237,9 @@
 
 // greet();
 
-
 // Arrow Function Shorter Syntax
 
-// If the function has one parameter and one return statement, you can omit parentheses and curly braces. 
+// If the function has one parameter and one return statement, you can omit parentheses and curly braces.
 
 // one parameter :
 
@@ -293,10 +286,8 @@
 // == checks for value equality
 // === checks for value and type equality(strict equality)
 
-
 // console.log(5 == "5");
 // console.log(5 === "5");
-
 
 // Ternary Operator
 
@@ -304,17 +295,47 @@
 
 // condition ? valueIfTrue : valueIfFalse;
 
-let age = 18;
+// let age = 18;
 
-let status = age >=18? "You are an adult" : "You are not an adult";
-console.log(status);
+// let status = age >=18? "You are an adult" : "You are not an adult";
+// console.log(status);
+
+// map()
+
+// map() is a method that creates a new array by applying a transformation function to each element of the original array.
+
+// newArray = originalArray.map(callbackfunction(currentvalue, index, array));
+
+// const numbers = [1,2,3,4,5];
+// const doubled = numbers.map(num => num * 2);
+// console.log(doubled);
+
+//callback function
+// map
+// filter
+// reduce
+// forEach
+
+// manipulating HTML and CSS --
+
+// const headingE1 = document.querySelector(".heading");
+//headingE1.textContent = "Hello  <span class='heading--big'>Everyone</span>"
+
+// headingE1.innerHTML = "Hello <span class='heading--big'>Everyone</span>"
+
+// headingE1.insertAdjacentHTML("beforeend", "<span class='heading--big'>Everyone</span>")
+
+// headingE1.style.fontSize = "58px";
+
+// headingE1.classList.add("heading--big");
+
+const headingE1 = document.querySelector(".heading");
+
+const clickHandler = () => {
+  headingE1.style.color = "red";
+  console.log("changed color");
+};
 
 
 
-
-
-
-
-
-
-
+headingE1.addEventListener("click", clickHandler);
