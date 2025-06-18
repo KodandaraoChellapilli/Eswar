@@ -329,13 +329,29 @@
 
 // headingE1.classList.add("heading--big");
 
-const headingE1 = document.querySelector(".heading");
+// const headingE1 = document.querySelector(".heading");
 
-const clickHandler = () => {
-  headingE1.style.color = "red";
-  console.log("changed color");
-};
+// const clickHandler = () => {
+//   headingE1.style.color = "red";
+//   console.log("changed color");
+// };
 
 
 
-headingE1.addEventListener("click", clickHandler);
+// headingE1.addEventListener("click", clickHandler);
+
+
+
+const body = document.body;
+
+
+function setColor(name){
+  body.style.backgroundColor = name
+}
+
+function randomColor(){
+  const red = Math.round(Math.random() * 255);
+  const green =Math.round( Math.random() * 255)
+  const blue = Math.round(Math.random() * 255)
+  body.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
+}
