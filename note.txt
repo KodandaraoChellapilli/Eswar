@@ -1,0 +1,12 @@
+What is React and how can you best describe it ? 
+Ans: That’s a really kind of controversial question depending on who you ask, I guess, because a lot of people see it as like a framework or like a library and what not.
+So the opinion is always kind of divided in the React community.
+I see it more like a library of sorts, right? For JavaScript to create UI interfaces.
+
+What is JSX?
+Ans: JSX is essentially kind of like the templating language for React, right?
+Kind of like you have it in backend applications where they use templating languages.
+You have the same in React where you can basically insert JavaScript inside of HTML — which is kind of like its own thing called JSX
+What are some of the benefits of having JSX and the ability to put JavaScript in HTML?
+Ans: That I’m not really sure of.
+But I really enjoy working in JSX because I like having the option of using JavaScript inside essentially HTML and having some of the flexibility there.

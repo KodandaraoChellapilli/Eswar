@@ -342,16 +342,41 @@
 
 
 
-const body = document.body;
+// const body = document.body;
 
 
-function setColor(name){
-  body.style.backgroundColor = name
+// function setColor(name){
+//   body.style.backgroundColor = name
+// }
+
+// function randomColor(){
+//   const red = Math.round(Math.random() * 255);
+//   const green =Math.round( Math.random() * 255)
+//   const blue = Math.round(Math.random() * 255)
+//   body.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
+// }
+
+const input = document.getElementById("input");
+
+
+function reverseString(str){
+  return str.split("").reverse().join("");
 }
 
-function randomColor(){
-  const red = Math.round(Math.random() * 255);
-  const green =Math.round( Math.random() * 255)
-  const blue = Math.round(Math.random() * 255)
-  body.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
+function check(){
+
+  const value = input.value
+  const reverse = reverseString(value);
+
+  if (value === reverse){
+    alert("P A L I N D R O ME")
+  } else {
+    alert("N O T P A L I N D R O ME")
+  }
+
+
+  input.value = "";
+ 
+  
+
 }
