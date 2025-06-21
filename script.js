@@ -742,23 +742,26 @@
 // })
 
 
-function task(time, name){
+// function task(time, name){
 
-  return new Promise((resolve)=>{
-    setTimeout(()=>{
-      console.log(name);
-      resolve();
+//   return new Promise((resolve)=>{
+//     setTimeout(()=>{
+//       console.log(name);
+//       resolve();
 
-    }, time);
+//     }, time);
 
-  })
+//   })
 
-}
+// }
 
-task(1000, "Task1")
-.then(()=> task(1000, "Task2"))
-.then(()=> task(1000, "Task3"))
-.then(()=> task(1000, "Task4"))
+// task(1000, "Task1")
+// .then(()=> task(1000, "Task2"))
+// .then(()=> task(1000, "Task3"))
+// .then(()=> task(1000, "Task4"))
+
+console.log("My name is Eswar");
+
 
 
 
