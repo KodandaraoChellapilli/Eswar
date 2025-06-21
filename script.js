@@ -356,27 +356,409 @@
 //   body.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
 // }
 
-const input = document.getElementById("input");
+// const input = document.getElementById("input");
 
 
-function reverseString(str){
-  return str.split("").reverse().join("");
-}
+// function reverseString(str){
+//   return str.split("").reverse().join("");
+// }
 
-function check(){
+// function check(){
 
-  const value = input.value
-  const reverse = reverseString(value);
+//   const value = input.value
+//   const reverse = reverseString(value);
 
-  if (value === reverse){
-    alert("P A L I N D R O ME")
-  } else {
-    alert("N O T P A L I N D R O ME")
-  }
+//   if (value === reverse){
+//     alert("P A L I N D R O ME")
+//   } else {
+//     alert("N O T P A L I N D R O ME")
+//   }
 
 
-  input.value = "";
+//   input.value = "";
  
   
 
+// }
+
+// function doMath(num, callback){
+//   return callback(num);
+// }
+
+
+// const square = x => x * x;
+// console.log(doMath(5, square));
+
+
+// Without destructuring
+// const student = {
+//   name: "Eswar",
+//   age: 27,
+//   grade: "A"
+// };
+
+// const name1 = student.name;
+// const age1 = student.age;
+// const grade1 = student.grade;
+// console.log(name1);
+// console.log(age1);
+// console.log(grade1);
+
+
+// With Destructuring 
+
+// const {name, age, grade} = student;
+// console.log(name);
+// console.log(age);
+// console.log(grade);
+
+
+
+// const car = {
+//   brand: "Toyota",
+//   model: "Camry",
+//   year: 2021
+// };
+// const {brand, model, year} = car;
+// console.log(brand);
+// console.log(model);
+// console.log(year);
+
+
+// const user = {
+//   firstName: "Krishna",
+//   age: 30
+
+// };
+
+// const {firstName: name} = user;
+// console.log(name);
+
+// spread Operator  : its written as ... the elements of an array pr the properties of an object
+
+// const numbers = [1,2,3,4,5];
+
+// const newNumbers = [...numbers, 6, 7, 8, 9, 10];
+// console.log(newNumbers);
+
+
+// const person = {name: "Noah", age: 27};
+// const newPerson = {...person,  city:"Florida"};
+// console.log(newPerson);
+
+
+// const arr1 = [1,2,3];
+// const arr2 = [4,5,6];
+// const arr3 = [...arr1, ...arr2];
+// console.log(arr3);
+
+// Imagine a line of people, where each person is holding the hand of the next person. 
+// Thats called a linkedlist. Every person (Called a node) points to the next person
+
+
+// spread and rest operators(...)
+
+// const fruits = ["apple", "banana"];
+// const moreFruits = ["orange", "kiwi", ...fruits];
+// console.log(moreFruits);
+
+// Rest Operator ... (For collecting things)
+
+
+// function showFruits(first, ...restFruits){
+//   console.log(first);
+//   console.log(restFruits);
+
+
+// }
+
+// showFruits("apple", "banana", "orange", "kiwi");
+
+
+// let isHappy = true;
+
+// let message = isHappy? "I am happy" : "I am not happy";
+// console.log(message); 
+
+
+//Optional Chaining ? (.)
+
+// const user = {};
+
+// console.log(user.profile);
+
+
+// friend.bag.pencil.color
+// friend.bag?.pencil?.color
+
+// const friend = {
+//   name: "Eswar",
+//   bag: {
+//     pencil : {
+//       color: "blue"
+//       }
+//   }
+// }
+
+// // console.log(friend.bag?.pencil?.color);
+
+// const friend1 = {
+//   name: "Mohan"
+// }
+
+// console.log(friend1.bag?.pencil?.color);
+
+//.map()
+
+//array.map((element, index, array) => {})
+
+  // const nums = [10,20,30];
+  // const result = nums.map(n => n + 1);
+  // console.log(result);
+
+  // const nums = [5,10,15];
+  // const result = nums.map((n, i)=> n + i);
+  // console.log(result);
+
+
+  // const nums = [1,2,3]
+  // const result = nums.map((n, i, arr)=>{
+  //   return `${n} is at index ${i} in [${arr}]`;
+  // })
+
+  // console.log(result);
+
+  // const students = [
+  //   {name: "Eswar", grade: 80},
+  //   {name: "Krishna", grade: 90},
+  //   {name: "Mohan", grade: 70}
+  // ];
+
+  // const updatedGrades = students.map( student => {
+  //   return {
+  //     name: student.name,
+  //     grade: student.grade + 5
+  //   }
+
+  // });
+  // console.log(updatedGrades);
+
+  // const students = [
+  //   {name: "Mohan"},
+  //   {name: "Krishna"},
+  //   {name: "Eswar"}
+  // ];
+
+  // const attendanceMarked  = students.map((student, index)=>{
+  //   return {
+  //     ...student,
+  //     rollNumber: index + 1
+
+  //   }
+  // });
+
+  // console.log(attendanceMarked);
+
+  // const menu = [
+  //   {name: "Pizza", price: 10},
+  //   {name: "Burger", price: 5},
+  //   {name: "Pasta", price: 8}
+  // ];
+
+  // const withTax = menu.map((food, index, fullMenu) =>{
+  //   return {
+  //     item: food.name,
+  //     originalPrice: food.price,
+  //     priceWithTax: (food.price * 1.1).toFixed(2),
+  //     menuSize: fullMenu.length
+    
+
+  //   }
+  // })
+
+  // console.log(withTax);
+
+
+  // const products = [
+  //   {name: "Laptop"},
+  //   {name: "Mobile"},
+  //   {name: "Tablet"}
+  // ]
+
+  // const availableProducts = products.map(product =>{
+  //   return {
+  //     ...product,
+  //     isAvailable: true
+  //   }
+  // })
+
+  // console.log(availableProducts);
+
+
+  // const students = [
+  //   {name: "Eswar", grade: 75, passed: true},
+  //   {name: "Krishna", grade: 45, passed: false},
+  //   {name: "Mohan", grade: 82, passed: true},
+  //   {name: "Suresh", grade: 95, passed: true},
+    
+  // ];
+
+  // // const passedStudents = students.filter(student => student.passed);
+  // // console.log(passedStudents);
+
+  // const topPassedStudents = students.filter(student =>
+  //   student.passed && student.grade > 80
+
+  // )
+
+  // console.log(topPassedStudents);
+
+  // const nums = [1,2,3,4];
+
+  // const sum = nums.reduce((total, current) => total + current, 10);
+  // console.log(sum);
+
+  //sort
+
+  // const letters = ['c', 'a', 'd', 'b'];
+  // letters.sort();
+
+  // console.log(letters);
+
+
+
+  // console.log("Hello");
+  // console.log("World");
+
+  // SetInterval(function, time): Start a repeating task
+  //clearInterval(): Stop a repeating task
+  //setTimeout(function, time): does the task only once after delay
+
+
+//   console.log("My name is Eswar");
+
+// // setInterval(() => {
+// //   console.log("Hello");
+// // }, 2000);
+
+// let count = 0;
+// const timer = setInterval(()=>{
+//   console.log("Hello");
+//   count = count + 1;
+
+//   if (count >= 3) {
+//     clearInterval(timer); // stop after  3 hellos
+
+//   }
+
+
+
+// }, 1000);
+
+// console.log("My name is Krishna");
+
+
+// console.log("My name is Eswar");
+
+// setTimeout(() => {
+//   console.log("Hello");
+// }, 2000);
+
+
+// console.log("My name is Krishna");
+
+// let vinny: string = "hello";
+
+// console.log(vinny);
+
+// callbacks, callback hell, and promises - three super important Javascript concepts
+// used to handle asynchronous tasks like loading data from server waiting for a button click, or using timers
+
+// SetTimeout()
+// Fetching Data From an API
+//Reading a File
+// Listening for user events
+
+
+//What is callback?
+// A callback is a function that is passed as an argument to another function and is executed after the completion of the other function
+
+// function greet(name, callback){
+//   console.log("Hello " + name);
+//   callback();
+// }
+
+// function sayBye(){
+//   console.log("Goodbye");
+// }
+
+// greet("Eswar", sayBye);
+
+// Callback Hell : Nested Callbacks : When you have too many callbacks inside callbacks, it creates a pyramid shaped code thats hard to read and maintain - this is called callback hell.
+
+
+
+// setTimeout(()=> {
+//   console.log("Hello");
+//   setTimeout(() => {
+//     console.log("World");
+//     setTimeout(() => {
+//       console.log("!");
+//       setTimeout(() => {
+//         console.log("Goodbye");
+//       }, 1000);
+//     }, 1000);
+    
+//   }, 1000);
+
+// }, 1000);
+
+
+// What is a Promise?
+// A promise is better way to write async code without callbacks.
+//It represents a future value: either success or failure.
+
+//Promise states:
+//Pending - not finished yet.
+//Fulfilled - success - Resolved - finished successfully
+//Rejected - failure or failed
+
+// let myPromise = new Promise((resolve, reject)=>{
+//   let gameArrived = false;
+
+//   if(gameArrived){
+//     resolve("Your Game Arrived");
+//   } else {
+//     reject("Your Game Not Arrived");
+
+//   }
+
+// })
+
+// myPromise.then((result)=>{
+//   console.log("success" , result);
+// }).catch((error)=>{
+//   console.log("Failure", error);
+// })
+
+
+function task(time, name){
+
+  return new Promise((resolve)=>{
+    setTimeout(()=>{
+      console.log(name);
+      resolve();
+
+    }, time);
+
+  })
+
 }
+
+task(1000, "Task1")
+.then(()=> task(1000, "Task2"))
+.then(()=> task(1000, "Task3"))
+.then(()=> task(1000, "Task4"))
+
+
+
